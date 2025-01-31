@@ -77,13 +77,9 @@ submitButton.addEventListener("click", () => {
     const userAnswer = selectedOption.value;
     const correctAnswer = questions[currentQuestionIndex].correct;
 
+    // Increment score if the answer is correct
     if (userAnswer === correctAnswer) {
-        resultElement.textContent = "Correct!";
-        resultElement.style.color = "green";
         score++;
-    } else {
-        resultElement.textContent = `Wrong! Correct answer: ${correctAnswer}`;
-        resultElement.style.color = "red";
     }
 
     setTimeout(() => {
